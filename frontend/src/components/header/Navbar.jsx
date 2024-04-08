@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -15,12 +15,12 @@ function Navbar() {
                 href="#"
                 className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
               >
-                <div class="flex items-center">
-                  <div class="logo flex items-center">
-                    <div class="w-12 h-12 rounded-full overflow-hidden animate-pulse">
-                      <div class="w-full h-full bg-gradient-to-r from-purple-500 to-indigo-500 animate-gradient"></div>
+                <div className="flex items-center">
+                  <div className="logo flex items-center">
+                    <div className="w-12 h-12 rounded-full overflow-hidden animate-pulse">
+                      <div className="w-full h-full bg-gradient-to-r from-purple-500 to-indigo-500 animate-gradient"></div>
                     </div>
-                    <div class="text-xl font-bold ml-4">TokenizeMe</div>
+                    <div className="text-xl font-bold ml-4">TokenizeMe</div>
                   </div>
                 </div>
               </a>
@@ -60,9 +60,11 @@ function Navbar() {
                 My Tokens
               </a>
               <DropdownButton />
-              <button className="px-4 py-2 rounded-md border border-gray-200 bg-white text-green-800 text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md">
-                Sign In
-              </button>
+              <Link to="/signin">
+                <button className="px-4 py-2 rounded-md border border-gray-200 bg-white text-green-800 text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md">
+                  Sign In
+                </button>
+              </Link>
             </nav>
           </div>
         </div>
