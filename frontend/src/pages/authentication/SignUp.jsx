@@ -112,6 +112,7 @@ const SignUp = () => {
                     Full Name
                   </label>
                   <input
+                    placeholder="john"
                     type="text"
                     id="fullname"
                     name="fullname"
@@ -136,7 +137,7 @@ const SignUp = () => {
                     User Name
                   </label>
                   <input
-                    placeholder="username134"
+                    placeholder="john134"
                     type="text"
                     id="username"
                     name="username"
@@ -161,6 +162,7 @@ const SignUp = () => {
                     Email
                   </label>
                   <input
+                    placeholder="john@gmail.com"
                     type="email"
                     id="email"
                     name="email"
