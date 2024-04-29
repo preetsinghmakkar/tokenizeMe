@@ -15,8 +15,9 @@ cloudinary.config({
 const signupUser = async (req, res) => {
   try {
     const { fullname, username, email, profileimage, bio } = req.body;
-
+    console.log(fullname, username, email, profileimage, bio);
     const user = await User.findOne({ $or: [{ email }, { username }] });
+    console.log("User : ", user);
     if (user) {
       res.status(400).json({ error: "User Already Exist" });
     }
@@ -24,7 +25,7 @@ const signupUser = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
 
     let hashPassword = await bcrypt.hash(password, salt);
-
+    console.log(hashPassword);
     const newUser = new User({
       fullname: fullname,
       username: username,
